@@ -1,0 +1,40 @@
+@media screen and (max-width: 1086px){
+	.wrapper{
+		width: 92%;
+	}
+	.box{
+		margin: 0;
+		margin-top: 33px;
+	}
+	.news{
+		width: 100%;
+	}
+	.today{
+		width: 100%;
+	}
+	.today-comes{
+		margin-left: 50px;
+	}
+	.last-trailer{
+		width: 100%;
+		margin-bottom: 100px;
+	}
+	.video-window{
+		width: 90%;
+		margin: 5%;
+	}
+}
+@media screen and (min-width: 1087px){
+	.wrapper{
+		width: 1090px;	
+	}
+	.news{
+		width: 540px;
+	}
+	.today{
+		height: 400px;
+	}
+	.video-window{
+		height: 500px;
+	}
+}

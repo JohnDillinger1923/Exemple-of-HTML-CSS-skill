@@ -1,0 +1,228 @@
+<!doctype html>
+<html>
+<head>
+	<title>The Davis Journal</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+	<link rel="stylesheet" href="css/ui_main.css">
+	<link rel="stylesheet" href="css/resp_ui_main.css">
+	<link rel="stylesheet" href="css/ui_serials.css">
+	<link rel="stylesheet" href="">
+	<script src="js/jquery-2.1.4.min.js"></script>
+	<script src="js/jquery.nicescroll.min.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/ui_index.js"></script>
+</head>
+<body>
+	<div class="logo">
+		<a href="index.html">
+			<h1>The Davis Journal</h1>
+		</a>
+	</div>
+
+	<div class="menu">
+		<ul>
+			<li><a href="slist.html">Сериалы</a></li>
+			<li><a href="stop.html">Топ</a></li>
+			<li class="log-button">Войти</li>
+		</ul>
+		
+		<div class="search_box">
+			<input class="search_field" name="query" placeholder="Поиск">
+			<div class="search-response"></div>
+		</div>
+	</div>
+
+	<div class="log-box">
+		<div class="close">x</div>
+	
+		<div class="log-ctrl-box">
+			<div class="log-ctrl-btn log">Вход</div>
+			<div class="log-ctrl-btn reg">Регистрация</div>
+		</div>
+
+		<form action="javascript:registration();" class="reg">
+			<h3>Регистрация</h3>
+			<label for="">Nickname</label>
+			<input class="input" name="nickname">
+			<label for="">E-mail</label>
+			<input class="input" name="email" type="email">
+			<label for="">Пароль</label>
+			<input class="input" name="password" type="password">
+			<input type="submit" class="btn" value="Зарегистрироваться">
+		</form>
+
+		<form action="javascript:login();" class="log">
+			<h3>Вход</h3>
+			<label for="">E-mail</label>
+			<input class="input" name="email" type="email">
+			<label for="">Пароль</label>
+			<input class="input" name="password" type="password">
+			<input type="submit" class="btn" value="Войти">
+		</form>
+
+		<div class="vk-log-btn"><a href="">Vkontakte</a></div>
+	</div>
+
+	<div class="response">
+		<div id="text"></div>
+		<div class="close">x</div>
+	</div>
+
+	<div class="feedback-btn">
+		<div class="txt"></div>
+	</div>
+	<div class="feedback-window box">
+		<div class="close">x</div>
+		<form action="javascript:feedback();">
+			<label for="">Есть предложение или замечание? Пиши сдесь.</label>
+			<input class="input" type="email" name="email" placeholder="Email (для не авторизированных пользователей)">
+			<textarea name="feed_text" class="input" placeholder="Опишите найденую проблему, ваше предолжение или че там у вас на уме." required></textarea>
+			<input type="submit" class="btn" value="Отправить">
+		</form>
+	</div>
+
+	<div class="serials-wrapper">
+	<div class="box info">
+		<img src="img/posters/10.jpg" alt="">
+		<span class="year">2015</span>
+		<h1>Spectre</h1>
+		<h2>007: СПЕКТР</h2>
+		<div class="info-row">
+			<div class="info-title">Жанр</div>
+			<div class="info-data">Приключения</div>
+		</div>
+		<div class="info-row">
+			<div class="info-title">Игра актеров</div>
+			<div class="info-data">Отличная</div>
+		</div>
+		<div class="info-row">
+			<div class="info-title">Съемка</div>
+			<div class="info-data">Отличная</div>
+		</div>
+		<div class="info-row">
+			<div class="info-title">Сценарий</div>
+			<div class="info-data">Отличный</div>
+		</div>
+		<div class="info-row">
+			<div class="info-title">Атмосфера</div>
+			<div class="info-data">Есть</div>
+		</div>
+		<div class="info-row">
+			<div class="info-title">Особенности</div>
+			<div class="info-data">---</div>
+		</div>
+
+		<div class="time-box">
+			<h4>Стоит ли он своего времени?</h4>
+			<input type="hidden" value="<? print $id; ?>">
+			
+			<div class="button">
+				<button onClick="time('no');">Нет</button>
+			</div>
+			<div class="counter no" style="color: rgb(218, 0, 0)"><? print $t_no; ?></div>
+
+			<div class="counter yes" style="color: rgb(0, 171, 11)"><? print $t_yes; ?></div>
+			<div class="button">
+				<button onClick="time('yes');">Да</button>
+			</div>
+		</div>
+		<div class="story-box">Зашифрованное послание из неизвестного источника выводит Бонда на след зловещей глобальной организации под кодовым названием СПЕКТР, в то время как М пытается спасти секретную разведывательную службу от ликвидации.</div>
+
+	</div>
+
+	<div class="right">
+
+	<div class="box series">
+		<h1 class="box-title">Даты выхода серий</h1>
+		<!-- <h4>Данных о выходе серий еще нет.</h4> -->
+		<!-- <h4>Сериал закрыт или закончился.</h4> -->
+		<span class="current-season">5 Сезон</span>
+
+			<div class="series-box">
+				<div class="series-number">1 Серия</div>
+				<div class="series-date">07.12.2015</div>
+			</div>
+
+			<div class="series-box">
+				<div class="series-number">1 Серия</div>
+				<div class="series-date">07.12.2015</div>
+			</div>
+
+			<div class="series-box">
+				<div class="series-number">1 Серия</div>
+				<div class="series-date">07.12.2015</div>
+			</div>
+
+			<div class="series-box">
+				<div class="series-number">1 Серия</div>
+				<div class="series-date">07.12.2015</div>
+			</div>
+
+			<div class="series-box">
+				<div class="series-number">1 Серия</div>
+				<div class="series-date">07.12.2015</div>
+			</div>
+
+			<div class="series-box">
+				<div class="series-number">1 Серия</div>
+				<div class="series-date">07.12.2015</div>
+			</div>
+
+			<div class="series-box">
+				<div class="series-number">1 Серия</div>
+				<div class="series-date">07.12.2015</div>
+			</div>
+
+			<div class="series-box">
+				<div class="series-number">1 Серия</div>
+				<div class="series-date">07.12.2015</div>
+			</div>
+
+		</div>
+
+	</div>
+
+	<div class="box videos">
+		<h1 class="box-title">Трейлеры</h1>
+				
+	<!-- <p>Трейлера еще нет</p> -->
+
+		<iframe src="https://www.youtube.com/embed/0WhA5DsNpWo" frameborder="0" allowfullscreen></iframe>
+		<h3>Первый трейлер </h3>
+	</div>
+
+	<div class="box reviews">
+		<h1 class="box-title">Отзывы</h1>
+
+		<form action="javascript:addReview();">
+			<label>Оставить отзыв</label>
+			<textarea name="review" cols="30" rows="10" class="input"></textarea>
+			<input type="hidden" name="serial" value="">
+			<input type="hidden" name="user" value="">
+			<input type="submit" class="btn" value="Добавить отзыв">
+		</form>
+
+		<div class="review-box">
+			<p>Веками неприступные стены Штормграда и магия защищали людей от любых напастей. Но древнее зло, побежденное и забытое тысячелетия назад, пробудилось. В самом сердце королевства открылся темный портал, и раса невиданных существ наводнила земли Азерота. Так начались события, призванные навсегда изменить судьбу этого мира.</p>
+			<div class="review-info">
+				<div class="user">GameOfThrones</div>
+				<div class="date">25 Oct 2016</div>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+	<footer>
+		<div class="foot-wrapper">
+			<div class="copy">© 2015 thedavisjournal.com</div>
+			<div class="soc">
+				<a href="https://vk.com/thedavisjournal" target="_blank">VK</a>
+			</div>
+		</div>
+	</footer>
+
+</body>
+</html>
