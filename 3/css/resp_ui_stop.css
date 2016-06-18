@@ -1,0 +1,33 @@
+@media screen and (max-width: 1086px){
+	.stop-wrapper{
+		width: 95%;
+		max-width: 720px;
+	}
+	.stop{
+		width: 100%;
+	}
+	.list-box{
+		width: 98%;
+		margin: 0 auto;
+	}
+	.list-box h1{
+		width: 40%;
+		overflow: hidden;
+	}
+	.list-box .spent-time{
+		width: 30%;
+	}
+	.list-box .spent-time .mark{
+		margin: 10px 5px;
+	}
+}
+
+@media screen and (min-width: 1087px){
+	.stop-wrapper{
+		width: 700px;
+	}
+	.list-box{
+		width: 660px;
+		margin: 10px 20px; 
+	}
+}
